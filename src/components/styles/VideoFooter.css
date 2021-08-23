@@ -1,0 +1,52 @@
+.videoFooter {
+  position: relative;
+  bottom: 150px;
+  color: white;
+  display: flex;
+  margin-left: 20px;
+}
+
+/* animating the disc */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.videoFooter_disc {
+  animation: spin infinite 5s linear;
+  height: 50px;
+  filter: invert(1);
+  position: absolute;
+  right: 20px;
+}
+
+.videoFooter_text {
+  flex: 1;
+}
+
+.videoFooter_icon {
+  filter: invert(1);
+  height: 20px;
+  position: absolute;
+}
+
+.videoFooter_text > h3 {
+  padding-bottom: 1.5rem;
+}
+
+.videoFooter_text > p {
+  padding-bottom: 1rem;
+}
+
+.videoFooter_ticker > .ticker {
+  height: fit-content;
+  margin-left: 20px;
+}
+
+.videoFooter_ticker p {
+  padding-top: 0.2rem;
+}
