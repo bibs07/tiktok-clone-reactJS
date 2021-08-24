@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles/VideoSidebar.css";
 
-export const VideoSidebar = () => {
+export const VideoSidebar = ({ likes, comments, shares }) => {
   const [liked, setLiked] = useState(false);
 
   const onLiking = () => {
@@ -14,7 +14,7 @@ export const VideoSidebar = () => {
         {liked ? (
           <>
             <img src="./heart.png" alt="heart-empty" />
-            <p>200</p>
+            <p>{likes}</p>
           </>
         ) : (
           <>
@@ -23,17 +23,17 @@ export const VideoSidebar = () => {
               alt="heart-filled"
               className="heartIcon"
             />
-            <p>{200 + 1}</p>
+            <p>{Number(likes) + 1}</p>
           </>
         )}
       </div>
       <div className="videoSidebar_button">
-        <img src="./chat.png" alt="heart-empty" />
-        <p>150</p>
+        <img src="./chat.png" alt="comment" />
+        <p>{comments}</p>
       </div>
       <div className="videoSidebar_button">
-        <img src="./share.png" alt="heart-empty" />
-        <p>50</p>
+        <img src="./share.png" alt="share" />
+        <p>{shares}</p>
       </div>
     </div>
   );
